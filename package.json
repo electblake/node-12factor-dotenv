@@ -7,13 +7,37 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [ "config", "env", "environment", "12factor",
+    "process",
+    "file",
+    "files",
+    ".env",
+    "process.env",
+    "parse",
+    "load",
+    "export",
+    "exports"
+  ],
   "author": "electblake <electblake@gmail.com> (http://twitter.com/electblake)",
-  "license": [
+  "maintainers": [
+      {
+        "name": "Blake Edwards",
+        "email": "electblake@gmail.com",
+        "web": "https://twitter.com/electblake"
+      }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "licenses": [
     {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+      "type": "MIT",
+      "url": "https://github.com/electblake/node-12factor-dotenv/blob/LICENSE"
     }
   ],
+  "bugs": {
+      "url": "https://github.com/electblake/node-12factor-dotenv/issues"
+    },
   "repository": {
     "type": "git",
     "url": "git://github.com/electblake/node-12factor-dotenv.git"
