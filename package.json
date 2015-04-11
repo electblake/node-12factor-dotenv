@@ -1,13 +1,17 @@
 {
   "name": "12factor-dotenv",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Include dotenv files in relative path tree, and parse with 12factor config",
   "main": "lib/config.js",
   "homepage": "https://github.com/electblake/node-12factor-dotenv",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [ "config", "env", "environment", "12factor",
+  "keywords": [
+    "config",
+    "env",
+    "environment",
+    "12factor",
     "process",
     "file",
     "files",
@@ -20,11 +24,11 @@
   ],
   "author": "electblake <electblake@gmail.com> (http://twitter.com/electblake)",
   "maintainers": [
-      {
-        "name": "Blake Edwards",
-        "email": "electblake@gmail.com",
-        "web": "https://twitter.com/electblake"
-      }
+    {
+      "name": "Blake Edwards",
+      "email": "electblake@gmail.com",
+      "web": "https://twitter.com/electblake"
+    }
   ],
   "engines": {
     "node": ">= 0.8.0"
@@ -36,8 +40,8 @@
     }
   ],
   "bugs": {
-      "url": "https://github.com/electblake/node-12factor-dotenv/issues"
-    },
+    "url": "https://github.com/electblake/node-12factor-dotenv/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/electblake/node-12factor-dotenv.git"
