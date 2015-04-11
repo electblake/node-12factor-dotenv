@@ -1,0 +1,14 @@
+{
+  "name": "node-12factor-dotenv",
+  "version": "0.0.1",
+  "description": "Include dotenv files in relative path tree, and parse with 12factor config",
+  "main": "lib/config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-env-file": "^0.1.7"
+  }
+}
