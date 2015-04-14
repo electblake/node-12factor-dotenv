@@ -1,3 +1,11 @@
+### 0.1.3 (2015-04-14)
+
+
+#### Bug Fixes
+
+* **paths:** use parent twice to get base app include module ([a2f747d3](https://github.com/electblake/node-12factor-dotenv/commit/a2f747d36f70fc469a62b86f80beea4a45aac3be))
+
+
 ### 0.1.2 (2015-04-14)
 
 
