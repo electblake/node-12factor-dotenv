@@ -1,6 +1,6 @@
 {
   "name": "12factor-dotenv",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Include dotenv files in relative path tree, and parse with 12factor config",
   "main": "lib/Schema.js",
   "homepage": "https://github.com/electblake/node-12factor-dotenv",
