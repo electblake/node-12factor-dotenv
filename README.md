@@ -53,7 +53,7 @@ var cfg = config({
 		type: 'string',
 		default: 'development'
 	}
-});
+}, { debug: true });
 
 console.log('debug: -- Debug is', process.env.DEBUG);
 console.log('debug: -- Port is', process.env.PORT);
