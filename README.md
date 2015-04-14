@@ -3,8 +3,7 @@
 [![Build Status](https://img.shields.io/travis/electblake/node-12factor-dotenv.svg?branch=master)](http://travis-ci.org/docpad/docpad "Check this project's build status on TravisCI")
 [![NPM version](https://img.shields.io/npm/v/12factor-dotenv.svg)](https://npmjs.org/package/12factor-dotenv "View this project on NPM")
 [![NPM downloads](https://img.shields.io/npm/dm/12factor-dotenv.svg)](https://npmjs.org/package/12factor-dotenv "View this project on NPM")
-[![Dependency Status](https://david-dm.org/electblake/12factor-dotenv.svg)](https://david-dm.org/electblake/12factor-dotenv)
-<br/>
+
 
 ## Automagically import dotenv files (`.env`)
 
