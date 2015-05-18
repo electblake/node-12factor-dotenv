@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "12factor-config": "^1.0.0",
+    "lodash": "^3.6.0",
     "node-env-file": "^0.1.7"
   },
   "devDependencies": {
@@ -55,7 +56,6 @@
     "gulp": "^3.8.11",
     "gulp-mocha": "^2.0.1",
     "gulp-watch": "^4.2.4",
-    "lodash": "^3.6.0",
     "mocha": "^2.2.4"
   }
 }
