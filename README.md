@@ -1,7 +1,8 @@
 # 12factor-dotenv
 
-[![Build Status](https://img.shields.io/travis/electblake/node-12factor-dotenv.svg?branch=master)](http://travis-ci.org/docpad/docpad "Check this project's build status on TravisCI")
-[![NPM version](https://img.shields.io/npm/v/12factor-dotenv.svg)](https://npmjs.org/package/12factor-dotenv "View this project on NPM")
+[![npm version](https://badge.fury.io/js/12factor-dotenv.svg)](https://npmjs.org/package/12factor-dotenv "View this project on NPM")
+[![Build Status](https://img.shields.io/travis/electblake/node-12factor-dotenv.svg?branch=master)](http://travis-ci.org/electblake/node-12factor-dotenv "Check this project's build status on TravisCI")
+
 [![NPM downloads](https://img.shields.io/npm/dm/12factor-dotenv.svg)](https://npmjs.org/package/12factor-dotenv "View this project on NPM")
 
 
