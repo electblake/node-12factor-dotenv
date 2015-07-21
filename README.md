@@ -39,17 +39,21 @@ var config = require('12factor-dotenv');
 
 var cfg = config({
 	DEBUG: {
-		type: 'string',
-		default: '*'
+		env: 'DEBUG', // the environment export var to read
+		type: 'boolean', // config var type (string, integer, boolean - maybe more see 12factor-config)
+		default: false
 	},
 	PORT: {
+		env: 'PORT',
 		type: 'integer',
 		default: 4000
 	},
-	PUBLIC_URL: {
+	MY_CUSTOM_VAR: {
+		env: 'MY_LOCAL_ENVIRONMENT_EXPORT_VAR',
 		type: 'string'
 	},
 	NODE_ENV: {
+		env: 'NODE_ENV',
 		type: 'string',
 		default: 'development'
 	}
