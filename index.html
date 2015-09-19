@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>12factor Dotenv for Node by electblake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">12factor Dotenv for Node</h1>
+      <h2 class="project-tagline">Discover and automagically load .env files, include them into process.env, and validate with 12factor-config</h2>
+      <a href="https://github.com/electblake/node-12factor-dotenv" class="btn">View on GitHub</a>
+      <a href="https://github.com/electblake/node-12factor-dotenv/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/electblake/node-12factor-dotenv/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://npmjs.org/package/12factor-dotenv" title="View this project on NPM"><img src="https://badge.fury.io/js/12factor-dotenv.svg" alt="npm version"></a>
+<a href="http://travis-ci.org/electblake/node-12factor-dotenv" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/electblake/node-12factor-dotenv.svg?branch=master" alt="Build Status"></a></p>
+
+<p><a href="https://npmjs.org/package/12factor-dotenv" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/12factor-dotenv.svg" alt="NPM downloads"></a></p>
+
+<h2>
+<a id="automagically-load-dotenv-files-env" class="anchor" href="#automagically-load-dotenv-files-env" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automagically Load Dotenv Files (<code>.env</code>)</h2>
+
+<p>This module looks for <code>.env</code> files loads them with <a href="https://www.npmjs.com/package/node-env-file">node-env-file</a> and returns a <a href="https://www.npmjs.com/package/12factor-config">12factor-config</a></p>
+
+<p><strong>Features</strong></p>
+
+<ul>
+<li>relative to parent module
+
+<ul>
+<li>note: Parent module is one that requires 12factor-dotenv</li>
+</ul>
+</li>
+<li>loads <code>.env</code> files in an ascending relative path:
+
+<ul>
+<li><code>./</code></li>
+<li><code>../</code></li>
+<li><code>../../</code></li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+
+<p><code>npm install 12factor-dotenv --save</code></p>
+
+<h1>
+<a id="config-schema" class="anchor" href="#config-schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>Config schema</h1>
+
+<p>This module uses 12factor-config to manage a config schema, for configuration support.</p>
+
+<p><a href="https://www.npmjs.com/package/12factor-config">Read More</a> about setting up configuration schema at the <a href="https://www.npmjs.com/package/12factor-config">12factor-config</a> package.</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>in a single config file (obey 12factor and unify your config location), do something like:</p>
+
+<pre><code>// in ./app/lib/config.js
+
+var config = require('12factor-dotenv');
+var schema = {
+    DEBUG: {
+        env: 'DEBUG', // the environment export var to read
+        type: 'boolean', // config var type (string, integer, boolean - maybe more see 12factor-config)
+        default: false
+    },
+    PORT: {
+        env: 'PORT',
+        type: 'integer',
+        default: 4000
+    },
+    MY_CUSTOM_VAR: {
+        env: 'MY_LOCAL_ENVIRONMENT_EXPORT_VAR',
+        type: 'string'
+    },
+    NODE_ENV: {
+        env: 'NODE_ENV',
+        type: 'string',
+        default: 'development'
+    }
+};
+
+var cfg = config(schema, { debug: true });
+
+console.log('info: -- PORT is', cfg.PORT);
+console.log('info: -- NODE_ENV is', cfg.NODE_ENV);
+
+console.log('debug: -- ENV Debug is', process.env.DEBUG);
+console.log('debug: -- ENV Port is', process.env.PORT);
+
+console.log('info: &lt; Configured.');
+
+module.exports = exports = cfg;
+
+</code></pre>
+
+<p>now <code>var cfg = require('./path/to/app/lib/config.js');</code> wherever you want your unified config - and keep .env(s) updated per environment.</p>
+
+<h2>
+<a id="tips" class="anchor" href="#tips" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tips</h2>
+
+<p>I personally enjoy using <code>global.__config = require('./path/to/config.js');</code> and accessing it throughout my app through a single global. It becomes 1 line in your super simple app bootstrapping code.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/electblake/node-12factor-dotenv">12factor Dotenv for Node</a> is maintained by <a href="https://github.com/electblake">electblake</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
