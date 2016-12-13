@@ -1,3 +1,11 @@
+### 0.1.6 (2016-12-13)
+
+
+#### Features
+
+* **env:** added `env` to options object param to allow customization of env() loading ([2a9dcd00](https://github.com/electblake/node-12factor-dotenv/commit/2a9dcd005a9e02c672d4cc633eabdb6230ec0197))
+
+
 ### 0.1.5 (2015-06-26)
 
 
