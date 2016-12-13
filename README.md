@@ -36,8 +36,7 @@ in a single config file (obey 12factor and unify your config location), do somet
 // in ./app/lib/config.js
 
 var config = require('12factor-dotenv');
-
-var cfg = config({
+var schema = {
 	DEBUG: {
 		env: 'DEBUG', // the environment export var to read
 		type: 'boolean', // config var type (string, integer, boolean - maybe more see 12factor-config)
@@ -57,14 +56,21 @@ var cfg = config({
 		type: 'string',
 		default: 'development'
 	}
-}, { debug: true });
+};
 
-console.log('debug: -- Debug is', process.env.DEBUG);
-console.log('debug: -- Port is', process.env.PORT);
+var cfg = config(schema, { debug: true, env: { overwrite: true } });
+
+## See https://www.npmjs.com/package/node-env-file#api for more details on `env` options
+
+console.log('info: -- PORT is', cfg.PORT);
 console.log('info: -- NODE_ENV is', cfg.NODE_ENV);
+
+console.log('debug: -- ENV Debug is', process.env.DEBUG);
+console.log('debug: -- ENV Port is', process.env.PORT);
+
 console.log('info: < Configured.');
 
-module.exports = cfg;
+module.exports = exports = cfg;
 
 ```
 

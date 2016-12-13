@@ -23,11 +23,15 @@ var testSchema = {
 	}
 };
 
-var testENV = ["DEBUG=true", "PORT=5000", "URL=http://github.com/electblake/node-12factor-dotenv"].join("\n");
-fs.writeFileSync('.env', testENV);
-thisConfig = new Config(testSchema, { debug: true, logger: console });
+const thisConfig = new Config(testSchema, { debug: false, logger: console, env: { overwrite: true } });
 
-describe('cfg', function(){
+describe('12factor-dotenv', function(){
+
+  before(function() {
+    var testENV = ["DEBUG=true", "PORT=5000", "URL=http://github.com/electblake/node-12factor-dotenv"].join("\n");
+    fs.writeFileSync('.env', testENV);
+  })
+
   describe('should have property DEBUG boolean', function() {
 
     it('should be boolean', function(){
